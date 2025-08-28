@@ -1,0 +1,24 @@
+- name: Harden OS
+  hosts: all
+  become: true
+  roles:
+    - name: devsec.hardening.os_hardening
+
+- name: Harden SSH
+  hosts: all
+  become: true
+  roles:
+    - name: devsec.hardening.ssh_hardening
+  # Option: pass in additional values to override defaults
+  # vars:
+  #   network_ipv6_enable: false
+  #   ssh_client_compression: true
+
+- name: Reboot the system
+  hosts: all
+  become: true
+  tasks:
+    - name: Reboot machine
+      ansible.builtin.reboot:
+        msg: "Reboot initiated by Ansible after hardening tasks."
+        reboot_timeout: 600

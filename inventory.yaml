@@ -1,0 +1,6 @@
+all:
+  hosts:
+    node:
+      ansible_host: <REPLACE-WITH-YOUR-HOST-ADDR>
+  vars:
+    ansible_user: <REPLACE-WITH-USER-TO-RUN-AS>
