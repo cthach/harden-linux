@@ -8,7 +8,7 @@ Ansible playbook for hardening a Linux host(s) to comply with these DevSec basel
 ## Run
 
 ```shell
-# Modify inventory with host address and user. Esure you have already setup SSH
+# Modify inventory with host address and user. Ensure you have already setup SSH
 # access on your target host.
 nano inventory.yaml
 
